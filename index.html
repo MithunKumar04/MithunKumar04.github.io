@@ -3,15 +3,100 @@
         <title>Array List</title>
     </head>
     <body>
-        <h1>ADD ELEMENTS AND GET AS LIST</h1>
-        <label for="">Enter elements for the array</label><br><br>
-        <input id="n1" type="text"><br><br>
-        <button onclick="addele()">add</button>
-        <br><br><br><br>
-        <label for="">Get the elements as a list</label><br><br>
-        <button onclick="getele()">get</button><br><br><br><br>
-        <label for="">The element present in are</label><br><br>
+        <h1>ADD TWO NUMBERS</h1>
+        <label for="">Enter numbers to add</label><br><br>
+        <input id="n1" type="number"><br><br>
+        <input id="n2" type="number"><br><br>
+        <button onclick="getsum()">add</button><br><br><br><br>
         <label id="x1" for=""></label>
+        <br><br><br><br> 
+
+        <h1>SUBTRACT TWO NUMBERS</h1>
+        <label for="">Enter numbers to subtract</label><br><br>
+        <input id="n3" type="number"><br><br>
+        <input id="n4" type="number"><br><br>
+        <button onclick="getdiff()">sub</button><br><br><br><br>
+        <label id="x2" for=""></label>
+        <br><br><br><br>
+
+        <h1>MULTIPLY TWO NUMBERS</h1>
+        <label for="">Enter numbers to multiply</label><br><br>
+        <input id="n5" type="number"><br><br>
+        <input id="n6" type="number"><br><br>
+        <button onclick="getprod()">mul</button><br><br><br><br>
+        <label id="x3" for=""></label>
+        <br><br><br><br>
+
+        <h1>QOUTIENT OF TWO NUMBERS</h1>
+        <label for="">Enter numbers to find qoutient</label><br><br>
+        <input id="n7" type="number"><br><br>
+        <input id="n8" type="number"><br><br>
+        <button onclick="getquot()">quot</button><br><br><br><br>
+        <label id="x4" for=""></label>
+        <br><br><br><br>
+
+        <h1>REMAINDER OF TWO NUMBERS</h1>
+        <label for="">Enter numbers to remainder</label><br><br>
+        <input id="n9" type="number"><br><br>
+        <input id="n10" type="number"><br><br>
+        <button onclick="getrem()">rem</button><br><br><br><br>
+        <label id="x5" for=""></label><br><br><br><br>
+
+        <h1>POWER OF TWO NUMBERS</h1>
+        <label for="">Enter numbers to remainder</label><br><br>
+        <input id="n11" type="number"><br><br>
+        <input id="n12" type="number"><br><br>
+        <button onclick="getpow()">pow</button><br><br><br><br>
+        <label id="x6" for=""></label><br><br><br><br>
+
+        <label > End </label>
     </body>
-    <script src="arraylist.js"></script>
+    <script >
+        function getsum()
+        {
+            const num1=parseFloat(document.getElementById("n1").value);
+            const num2=parseFloat(document.getElementById("n2").value);
+            let val=num1+num2;
+            document.getElementById("x1").innerText=val;
+        }
+        function getdiff()
+        {
+            const num3=document.getElementById("n3").value;
+            const num4=document.getElementById("n4").value;
+            let val=num3-num4;
+            document.getElementById("x2").innerText=val;
+        }
+        function getprod()
+        {
+            const num5=document.getElementById("n5").value;
+            const num6=document.getElementById("n6").value;
+            let val=num5*num6;
+            document.getElementById("x3").innerText=val;
+        }
+        function getquot()
+        {
+            const num7=document.getElementById("n7").value;
+            const num8=document.getElementById("n8").value;
+            let val=Math.floor(num7/num8);
+            document.getElementById("x4").innerText=val;
+        }
+        function getrem()
+        {
+            const num9=document.getElementById("n9").value;
+            const num10=document.getElementById("n10").value;
+            let val=num9%num10;
+            document.getElementById("x5").innerText=val;
+        }
+        function getpow()
+        {
+            const num11=document.getElementById("n11").value;
+            const num12=document.getElementById("n12").value;
+            let val=1;
+            for(let i=0;i<num12;i++)
+            {
+                val=val*num11;
+            }
+            document.getElementById("x6").innerText=val;
+        }
+    </script>
 </html>
